@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Home</title>
+       
+    </head>
+    <body>
+        <h1>home</h1>
+
+       <% for(let i of file){ %>
+        <p> <%= i.name %></p>
+       <% } %>
+        
+      
+        
+        <form action="/save-file" enctype="multipart/form-data" method="POST">
+            <input type="file" name="myfile" placeholder="upload file">
+            <button type="submit">upload</button>
+        </form>
+
+
+        <h3 style="margin-top:2rem"><a href="/logout">Sign out</a></h3> 
+
+    </body>
+</html>
